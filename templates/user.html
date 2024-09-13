@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block title%} Blog {%endblock%}
+
+
+{% block content%}
+<section></section>
+<h1> List of bloggers</h1>
+<div class="row-6">
+    <ul>
+        {%for user in users%}
+
+        <li><a href="/users/{{user.id}}">{{user.first_name}} {{user.last_name}}</a></li>
+
+        {%endfor%}
+
+    </ul>
+</div>
+
+<div class="row-6">
+
+    <button class="btn btn-sm btn-infor"><a href="/add/user">New user</a></button>
+</div>
+{% endblock %}
