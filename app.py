@@ -96,7 +96,7 @@ def user_detail(user_id):
     return render_template('user_detail.html', user=user)
 
 
-@app.route('/users/<int:user_id>/edit"')
+@app.route('/users/<int:user_id>/edit')
 def edit_user(user_id):
     user = Blog.query.get(user_id)
     print(user)
